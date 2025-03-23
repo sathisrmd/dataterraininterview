@@ -754,7 +754,7 @@ class _TopProgramsCardState extends State<TopProgramsCard> {
                                     _buildTableCell(program["Program Name"]!),
                                     _buildTableCell(program["Category"]!),
                                     _buildTableCell(program["Created By"]!),
-                                    _buildTableStar(program["Rating"]!),
+                                    _buildTableCell(program["Rating"]!),
                                   ],
                                 );
                               }).toList(),
@@ -863,7 +863,7 @@ SizedBox(height: 20,),
                                     _buildTableCell(mentor["Program Name"]!),
                                     _buildTableCell(mentor["Category"]!),
                                     _buildTableCell(mentor["Created By"]!),
-                                    _buildTableCell(mentor["Rating"]!),
+                                    _buildTableStar(mentor["Rating"]!),
                                   ],
                                 );
                               }).toList(),
