@@ -754,7 +754,7 @@ class _TopProgramsCardState extends State<TopProgramsCard> {
                                     _buildTableCell(program["Program Name"]!),
                                     _buildTableCell(program["Category"]!),
                                     _buildTableCell(program["Created By"]!),
-                                    _buildTableCell(program["Rating"]!),
+                                    _buildTableStar(program["Rating"]!),
                                   ],
                                 );
                               }).toList(),
@@ -894,6 +894,24 @@ SizedBox(height: 20,),
           color: Colors.black87,
         ),
       ),
+    );
+  }
+  Widget _buildTableStar(String text, {bool isHeader = false}) {
+    return Row(
+      children: [
+        Icon(Icons.star,color: Colors.yellow,),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            text,
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: isHeader ? FontWeight.bold : FontWeight.normal,
+              color: Colors.black87,
+            ),
+          ),
+        )
+      ],
     );
   }
 }
